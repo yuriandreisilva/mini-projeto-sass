@@ -1,0 +1,28 @@
+// função para inverter cores e não ficare 
+// com visibilidae dificuldata
+
+// qnd muda a cor do texto lá nas variáveis, o fundo
+// onde foi aplicada a função seta cor invertida
+@function set-text-color($cor-texto){
+  @if lightness($cor-texto) > 70{
+      @return black;
+  }@else {
+      @return white;
+  } 
+}
+
+* {
+    font-size:18px;
+    font-family: Arial,Helvetica,sans-serif;
+    color: set-text-color($cor-fundo-principal);
+}
+
+body .principal {
+    margin: 0px 50px 15px 50px; 
+    
+    #arvore-dom {
+        display: block;
+        margin: auto;
+        border: 1px solid;
+    }
+ }

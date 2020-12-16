@@ -1,0 +1,18 @@
+footer {
+    text-align: center;
+    border-top: 1px solid;
+
+    // função $cor-fundo-footer:
+    // chama a função para qnd trocarmos de cor do texto, alterar
+    // automaticamente o fundo para ficar com fácil visibilidade
+
+    // depende mto da cor do fundo, se for mais escura, irá setar letra branca
+    // se for fundo claro, setará cor escura
+    // white / black no caso
+    background-color: $cor-fundo-footer;
+    padding: 1px;
+
+    p, a {
+        color: set-text-color($cor-fundo-footer)
+    }
+}

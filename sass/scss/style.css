@@ -1,0 +1,128 @@
+* {
+  font-size: 18px;
+  font-family: Arial,Helvetica,sans-serif;
+  color: black;
+}
+
+body .principal {
+  margin: 0px 50px 15px 50px;
+}
+
+body .principal #arvore-dom {
+  display: block;
+  margin: auto;
+  border: 1px solid;
+}
+
+#menu {
+  border-bottom: 1px solid;
+}
+
+#menu #logo {
+  width: 10%;
+  padding: 10px;
+}
+
+#menu .lista-menu {
+  margin: 1px;
+  list-style: none;
+  background-color: #ddd;
+}
+
+#menu li {
+  display: inline;
+  position: relative;
+  text-align: right;
+}
+
+#menu li a {
+  padding: 10px 15px;
+  display: inline-block;
+  /* visual do link */
+  background-color: #ddd;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 3px solid #EDEDED;
+}
+
+#menu li a:hover {
+  background-color: #4CAF50;
+  color: white;
+  border-bottom: 3px solid black;
+}
+
+main {
+  margin: 15px 50px 15px 50px;
+}
+
+main div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+main div fieldset {
+  border: none;
+}
+
+main div fieldset input[type=text], main div fieldset select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main div fieldset input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+main div fieldset input[type=submit]:hover {
+  background-color: #1bc724;
+}
+
+.tabela {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid;
+}
+
+.tabela th {
+  height: 30px;
+  background-color: #4CAF50;
+}
+
+.tabela td, .tabela th {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.tabela tr:nth-child(even) {
+  background-color: #d1cfcf;
+}
+
+.tabela tr:hover {
+  background-color: #ddd;
+}
+
+footer {
+  text-align: center;
+  border-top: 1px solid;
+  background-color: black;
+  padding: 1px;
+}
+
+footer p, footer a {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */

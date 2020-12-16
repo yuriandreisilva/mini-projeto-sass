@@ -1,0 +1,120 @@
+<!-- Especifica a versão (X)HTML-->
+<!DOCTYPE html>
+
+<!-- Representa a raiz do projeto, "language" em português -->
+<html lang="pt-BR">
+
+<!-- Infos gerais -->
+<head>
+
+    <!-- Infos para mecanismos de busca e indexação: SEO-->
+    <!-- author, keywords, descriptions, etc -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Yuri Andrei da Silva">
+    <link rel="stylesheet" href="sass/scss/style.css">
+    <title>FACE Digital</title>
+</head>
+
+<!-- Corpo todo da página -->
+<body>
+
+<!-- Cabeçalho, menus, destaques superiores -->
+<header>
+    <!-- Tag de seção, geralmente aponta links, muito usado para menu -->    
+    <nav id="menu">
+        <!-- <ul> refere-se à uma "unordered list", ou seja, uma lista desordenada -->
+        <!-- <ol> também pode ser usado, neste caso seria uma order list, lista ordenada: 1,2,3... -->
+        <!-- <menu> -->
+        <ul class="lista-menu">
+            <li>
+                <img src="logo.png" alt="logo" id="logo">
+            </li>   
+            <!-- Intuitivo: Refere-se à uma lista -->
+            <!-- <a> elemento "âncora", com o atributo href, serve para endereços de sites, pastas, emails, etc -->
+            <li>    
+                <a href="index.html" class="menu-link">
+                    Início
+                </a>          
+            </li>
+            <li>    
+                <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" class="menu-link">
+                    HTML
+                </a>          
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="menu-link">
+                    CSS
+                </a>
+            </li>
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="menu-link">
+                    Javascript
+                </a>
+            </li>
+            <li>
+                <a href="cadastro.html" class="menu-link">
+                    Cadastre-se
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>   
+
+<!-- Conteúdo principal -->
+<main class="principal-form">
+    
+    <div class="formulario-geral"> 
+        <form action="" method="get">
+            <fieldset>
+                <div class="grupo-form">
+                    <div class="row">
+                        <label for="nome">Nome completo:</label>
+                        <input id="nome" type="text">
+                        
+                        <label for="email">Email:</label>
+                        <input id="email" type="text">
+                        
+                    </div>
+                
+                    <div class="seletor">
+                        <label for="exemploInput">Sexo</label>
+                            <select class="form-control">
+                                <option value="">Selecione algo</option>
+                                <option value="">Masculino</option>
+                                <option value="">Feminino</option>
+                            </select>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox-2">
+                        <label for="checkbox-2">Marque aqui</label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox-3">
+                        <label for="checkbox-3">Marque aqui</label>
+                    </div>
+                    
+                    <div class="radio">
+                        <input name="radios" type="radio" id="radio-button-1">
+                        <label for="radio-button-1">Ou aqui</label>
+                    </div>
+                    
+                    <div class="radio">
+                        <input name="radios" type="radio" id="radio-button-2">
+                        <label for="radio-button-2">Ou aqui</label>
+                    </div>
+                </div>
+                <input type="submit" value="Salvar">
+            </fieldset>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <p>Yuri Andrei da Silva<br>
+    <a href="mailto:yuri.andrei@facedigital.com.br">yuri.andrei@facedigital.com.br</a></p>
+</footer>
+
+</body>
+</html>

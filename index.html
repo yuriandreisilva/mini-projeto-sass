@@ -1,0 +1,204 @@
+<!-- Especifica a versão (X)HTML-->
+<!DOCTYPE html>
+
+<!-- Representa a raiz do projeto, "language" em português -->
+<html lang="pt-BR">
+
+    <!-- Infos gerais -->
+    <head>
+         <!-- Infos para mecanismos de busca e indexação: SEO-->
+        <!-- author, keywords, descriptions, etc -->
+        <meta charset="UTF-8">
+        <meta name="author" content="Yuri Andrei da Silva">
+        <link rel="stylesheet" href="sass/scss/style.css">
+        <title>FACE Digital</title>
+    </head>
+
+    <!-- Corpo todo da página -->
+    <body>
+
+        <!-- Cabeçalho, fs, destaques superiores -->
+        <header>
+            <!-- Tag de seção, geralmente aponta links, muito usado para menu -->    
+            <nav id="menu">
+                <!-- <ul> refere-se à uma "unordered list", ou seja, uma lista desordenada -->
+                <!-- <ol> também pode ser usado, neste caso seria uma order list, lista ordenada: 1,2,3... -->
+                <!-- <menu> -->
+                <ul class="lista-menu">
+                    <li>
+                        <img src="logo.png" alt="logo" id="logo">
+                    </li>   
+                    <!-- Intuitivo: Refere-se à uma lista -->
+                    <!-- <a> elemento "âncora", com o atributo href, serve para endereços de sites, pastas, emails, etc -->
+                    <li>    
+                        <a href="index.html" class="menu-link">
+                            Início
+                        </a>          
+                    </li>
+                    <li>    
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" class="menu-link">
+                            HTML
+                        </a>          
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="menu-link">
+                            CSS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="menu-link">
+                            Javascript
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cadastro.html" class="menu-link">
+                            Cadastre-se
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>    
+        
+        <!-- Conteúdo principal -->
+        <main class="principal">
+            <!-- Divisão, podemos ter várias divisões, é como um container -->
+            <!-- Ajuda a agrupar alguns elementos para a estilização, usando .class ou #id  -->
+            <!-- Deve ser utilizado quando não termos as tags <article> e/ou <nav>, elementos de semântica -->
+            <!-- <span> é parecido com o elemento <div>, porém, não é um element em bloco e sim em linha-->
+            <!-- <span> não tem uma finalidade específica, geralmente é usado para fins de estilização -->
+            <div class="divisao-principal">
+                <!-- Seção, podemos ter várias seções -->
+                <section class="secao">
+                    <h1>Entendendo o DOM (Document Object Model)</h1>
+                    <!-- <p> parágrafo, intuitivo-->
+                    <p>
+                        Você estudou bastante HTML, criou suas primeiras tags, aprendeu CSS, fez formulários bonitos, 
+                        botões incríveis, páginas responsivas e começou mostrar para todo mundo como aquilo é incrível, 
+                        mas chega uma hora que você deseja dar um passo a mais no seu aprendizado e se pergunta: 
+                        ”Mas como eu posso dar movimento a minha página? Queria tanto que aquele botão por exemplo 
+                        mudasse algo nela!”. É aí que entra o DOM, algo que constantemente você ouve falar por aí, 
+                        mas não sabe explicar ao certo o que é.
+                    </p>
+                    <p>
+                        Sabe aquelas animações legais que você vê por aí e você fala “Uau, queria tanto fazer algo assim, 
+                        mas como?”, elas são feitas manipulando o DOM (Document Object Model), 
+                        e esse artigo vai te explicar do zero o que ele é e como manipulá-lo.
+                    </p>
+
+                    <h2> Então, o que é o DOM?</h2>
+
+                    <p>
+                        O DOM (Document Object Model) é uma interface que representa como os documentos HTML e 
+                        XML são lidos pelo seu browser. Após o browser ler seu documento HTML, ele cria um objeto que faz uma 
+                        representação estruturada do seu documento e define meios de como essa estrutura pode ser acessada. 
+                        Nós podemos acessar e manipular o DOM com JavaScript, é a forma mais fácil e usada.
+                    </p>
+
+                    <h2>Quais as vantagens do DOM?</h2>
+
+                    <p>
+                        Com ele você tem infinitas possibilidades, você pode criar aplicações que atualizam os dados da 
+                        página sem que seja necessário uma atualização. Pode também criar aplicações que são customizáveis 
+                        pelo usuário, mudar o layout da página sem que seja necessário atualização. Arrastar, mover, excluir elementos.
+                        Ou seja, você tem infinitas possibilidades, milhares de coisas que você pode fazer manipulando o DOM, 
+                        basta você usar sua criatividade.
+                    </p>
+                    <hr>
+                    <h2>Como ele é representado pelo browser:</h2>
+                    
+                    <p>
+                        <!-- <img> é a tag implementada no HTML5 que traz uma melhora xp p/ as tags
+                        <figure> e <figcaption> 
+                        -->
+                        <!-- src = local da imagem -->
+                        <!-- alt = nome/título imagem, para fins de SEO -->
+                        <img src="arvore-dom.jpg" alt="arvore-dom" id="arvore-dom">
+                    </p>
+                    <hr>
+                    <p>
+                        A estrutura que o DOM constrói a partir da leitura do seu documento HTML.
+                    </p>
+                    <p>
+                        Nessa imagem vemos a estrutura do DOM, suas marcações e como ele é 
+                        montado pelo browser. Nessa base, temos 4 pontos importantes que você vai 
+                        ver bastante daqui pra frente:
+                    </p>
+
+                    <!-- Exemplo de lista ordenada, por padrão ascendente!-->
+                    <ol>
+                        <!-- <strong> tag para deixar em negrito -->
+                        <li><strong>Document:</strong>que como o nome diz, cuida de documentos HTML.</li>
+                        <li><strong>Elements:</strong> são todas as tags que estão em arquivos HTML ou XML se transformam em elementos da árvore DOM.</li>
+                        <li><strong>Texts:</strong> É o texto que vai entre os elementos. Todo o conteúdo das tags.</li>
+                        <li><strong>Attributes:</strong> É a junção de todos atributos para um nó específico. No caso, o attribute class=”hero” está apontando para o elemento.</li>
+                    </ol>
+                    
+                    <!-- <table> serve para fazermos tabelas -->
+                    <table class="tabela" style="overflow-x:auto;">
+                        <!-- <tr> = table row, representa a linha da tabela -->
+                        <tr>
+                            <!-- <th> = table header, define o "cabeçalho" da coluna -->
+                            <th>Métodos</th>
+                            <th>Events</th>
+                            <th>Percorrer elementos</th>
+                            <th>Elements</th>
+                        </tr>
+                        <tr>
+                            <!-- <td> = table data, define o dado em si, de cada célula -->  
+                            <td>getElementById()</td>
+                            <td>click</td>
+                            <td>.childNodes</td>
+                            <td>.parentNode</td>
+                        </tr>
+                        <tr>
+                            <td>getElementsByClassName()</td>
+                            <td>select</td>
+                            <td>.firstChild</td>
+                            <td>.firstElementChild</td>
+                        </tr>
+                        <tr>
+                            <td>getElementsByTagName()</td>
+                            <td></td>
+                            <td>.nodeName</td>
+                            <td>.lastElementChild</td>
+                        </tr>
+                        <tr>
+                            <td>querySelector()</td>
+                            <td></td>
+                            <td>.nodeValue</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>querySelectorAll()</td>
+                            <td></td>
+                            <td>.nodeType</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <br>
+                </section>
+            </div>
+        </main>
+
+
+        <footer>
+            <p>Yuri Andrei da Silva<br>
+            <a href="mailto:yuri.andrei@facedigital.com.br">yuri.andrei@facedigital.com.br</a></p>
+        </footer>
+    </body>
+</html>
+
+<!-- Fontes : -->
+<!-- HTML: -->
+<!-- https://developer.mozilla.org/pt-BR/docs/Glossario/Semantica -->
+<!-- https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/form -->
+<!-- https://developer.mozilla.org/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn/Forms -->
+
+
+<!-- CSS: -->
+<!-- https://developer.mozilla.org/pt-PT/docs/Web/CSS -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps -->
+<!-- https://developer.mozilla.org/pt-PT/docs/Learn/CSS/Estilo_de_texto -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks -->
+<!-- https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout -->

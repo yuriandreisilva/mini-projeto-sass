@@ -1,0 +1,16 @@
+.tabela {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid;
+    
+    th {
+        height: 30px;
+        background-color: $cor-botao;
+    }
+    td, th {
+        border: 1px solid;
+        padding: 10px;
+    }
+    tr:nth-child(even){background-color: #d1cfcf;}
+    tr:hover {background-color: #ddd;}
+}

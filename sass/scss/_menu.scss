@@ -1,0 +1,35 @@
+
+
+#menu {
+    border-bottom: 1px solid;
+    #logo { 
+        width: 10%;
+        padding: 10px;
+    }
+    .lista-menu {
+        margin: 1px;
+        list-style:none;
+        background-color: $cor-fundo-menu;
+    }
+    li { 
+        display: inline;
+        position: relative;  
+        text-align: right; 
+        
+        a {
+            padding: 10px 15px;
+            display: inline-block;
+            /* visual do link */
+            background-color: $cor-fundo-principal;
+            color: #333;
+            text-decoration: none;
+            border-bottom:3px solid #EDEDED;
+
+            &:hover {
+                background-color: $cor-botao;
+                color: white;
+                border-bottom:3px solid black;
+            }
+        }  
+    }
+}
